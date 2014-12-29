@@ -12,6 +12,7 @@
     auto-complete
     ag
     magit
+    exec-path-from-shell
     smart-mode-line
     enh-ruby-mode
     grizzl

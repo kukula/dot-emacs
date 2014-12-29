@@ -15,3 +15,7 @@
 (global-set-key (kbd "M-p") 'projectile-find-file)
 ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "M-b") 'projectile-switch-to-buffer)
+
+;; Load PATH from shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
