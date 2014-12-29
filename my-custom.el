@@ -13,8 +13,9 @@
 (load-theme 'wombat)
 
 ;; Mode line
-(require 'powerline)
-(powerline-center-theme)
+(require 'smart-mode-line)
+(sml/setup)
+(sml/apply-theme 'respectful)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
 (windmove-default-keybindings)

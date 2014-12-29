@@ -12,7 +12,7 @@
     auto-complete
     ag
     magit
-    powerline
+    smart-mode-line
     enh-ruby-mode
     grizzl
     projectile
