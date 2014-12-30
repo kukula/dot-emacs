@@ -10,6 +10,7 @@
 (defvar required-packages
   '(
     auto-complete
+    rvm
     ag
     magit
     exec-path-from-shell
