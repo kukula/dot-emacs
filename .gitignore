@@ -2,3 +2,4 @@ elpa
 *.dat
 *.eld
 *.cache
+eshell
