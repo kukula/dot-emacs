@@ -17,6 +17,9 @@
 (sml/setup)
 (sml/apply-theme 'respectful)
 
+;; Hooks
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
 (windmove-default-keybindings)
 
