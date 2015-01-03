@@ -10,12 +10,12 @@
 (global-set-key (kbd "C-c C-;") 'windmove-right)
 
 ;; Theme
-(load-theme 'wombat)
+(load-theme 'gruvbox t)
 
 ;; Mode line
 (require 'smart-mode-line)
 (sml/setup)
-(sml/apply-theme 'respectful)
+(sml/apply-theme 'dark)
 
 ;; Hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -25,3 +25,18 @@
 
 ;; Enable copy and pasting from clipboard
 (setq x-select-enable-clipboard t)
+
+;; Line numbers
+(setq linum-format "%d ")
+(add-hook 'prog-mode-hook 'linum-mode)
+
+;; Highlight current line
+(global-hl-line-mode)
+
+;; Highlight parentheses
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+(require 'paren)
+(set-face-background 'show-paren-match (face-background 'default))
+(set-face-foreground 'show-paren-match "#def")
+(set-face-attribute 'show-paren-match nil :weight 'extra-bold)
