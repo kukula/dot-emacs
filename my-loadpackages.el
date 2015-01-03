@@ -20,7 +20,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-
 ;; load RVM
 (require 'rvm)
 (rvm-use-default) ;; use rvm's default ruby for the current Emacs session
+
+;; SCSS mode
+(setq scss-compile-at-save nil)
