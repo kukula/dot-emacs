@@ -26,3 +26,7 @@
 
 ;; SCSS mode
 (setq scss-compile-at-save nil)
+
+
+;; CoffeeScript mode
+(custom-set-variables '(coffee-tab-width 2))
