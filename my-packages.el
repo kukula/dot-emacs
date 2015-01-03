@@ -30,6 +30,7 @@
     textmate
     web-mode
     scss-mode
+    coffee-mode
     ) "a list of packages to ensure are installed at launch.")
 
 
