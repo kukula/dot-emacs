@@ -29,6 +29,7 @@
     multiple-cursors
     textmate
     web-mode
+    scss-mode
     ) "a list of packages to ensure are installed at launch.")
 
 
@@ -48,4 +49,3 @@
   (dolist (p required-packages)
   (when (not (package-installed-p p))
     (package-install p))))
- 
