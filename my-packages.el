@@ -31,6 +31,8 @@
     web-mode
     scss-mode
     coffee-mode
+    slim-mode
+    haml-mode
     ) "a list of packages to ensure are installed at launch.")
 
 
