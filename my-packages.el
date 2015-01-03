@@ -33,7 +33,6 @@
     coffee-mode
     slim-mode
     haml-mode
-    gruvbox-theme
     ) "a list of packages to ensure are installed at launch.")
 
 

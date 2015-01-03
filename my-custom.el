@@ -10,7 +10,8 @@
 (global-set-key (kbd "C-c C-;") 'windmove-right)
 
 ;; Theme
-(load-theme 'gruvbox t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'sunburst t)
 
 ;; Mode line
 (require 'smart-mode-line)
@@ -28,7 +29,7 @@
 
 ;; Line numbers
 (setq linum-format "%d ")
-(add-hook 'prog-mode-hook 'linum-mode)
+;;(add-hook 'prog-mode-hook 'linum-mode)
 
 ;; Highlight current line
 (global-hl-line-mode)
