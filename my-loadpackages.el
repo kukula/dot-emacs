@@ -27,6 +27,13 @@
 ;; SCSS mode
 (setq scss-compile-at-save nil)
 
-
 ;; CoffeeScript mode
 (custom-set-variables '(coffee-tab-width 2))
+
+
+;; Multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-S-n") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-n") 'mc/mark-all-like-this)
