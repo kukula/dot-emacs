@@ -4,7 +4,6 @@
 
 (load "~/.emacs.d/my-loadpackages.el")
 (load "~/.emacs.d/my-functions.el")
-(load "~/.emacs.d/autocomplete.el")
 (load "~/.emacs.d/ruby.el")
 (load "~/.emacs.d/rails.el")
 

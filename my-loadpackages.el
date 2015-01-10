@@ -37,3 +37,11 @@
 (global-set-key (kbd "C-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-S-n") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-n") 'mc/mark-all-like-this)
+
+;; Autocomplete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories
+	     "~/.emacs.d/elpa/auto-complete-20141228.633/dict")
+(ac-config-default)
+(setq ac-ignore-case nil)
+(add-to-list 'ac-modes 'enh-ruby-mode)
