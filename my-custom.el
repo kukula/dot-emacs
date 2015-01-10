@@ -1,13 +1,12 @@
+;; UTF-8
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
 ;; Remove scrollbars, menu bars, and toolbars
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Wind-move
-(global-set-key (kbd "C-c C-j") 'windmove-left)
-(global-set-key (kbd "C-c C-k") 'windmove-down)
-(global-set-key (kbd "C-c C-l") 'windmove-up)
-(global-set-key (kbd "C-c C-;") 'windmove-right)
 
 ;; Theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
@@ -42,13 +41,6 @@
 (set-face-foreground 'show-paren-match "#def")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
-
-;; set keys for Apple keyboard, for emacs in OS X
-(setq mac-command-modifier 'super) ; make cmd key do Super
-(setq mac-option-modifier 'meta) ; make opt key do Meta
-(setq mac-control-modifier 'control) ; make Control key do Control
-(setq fn-function-modifier 'hyper)  ; make Fn key do Hyper
-
 ;; Interect with Mac OS X buffer
 (defun pbcopy ()
   (interactive)
@@ -64,6 +56,6 @@
   (pbcopy)
   (delete-region (region-beginning) (region-end)))
 
-(global-set-key (kbd "H-c") 'pbcopy)
-(global-set-key (kbd "H-v") 'pbpaste)
-(global-set-key (kbd "H-x") 'pbcut)
+(global-set-key (kbd "C-c c") 'pbcopy)
+(global-set-key (kbd "C-c v") 'pbpaste)
+(global-set-key (kbd "C-c x") 'pbcut)
