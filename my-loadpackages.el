@@ -45,3 +45,13 @@
 (ac-config-default)
 (setq ac-ignore-case nil)
 (add-to-list 'ac-modes 'enh-ruby-mode)
+
+
+;; Smartpatens
+(require 'smartparens-config)
+(require 'smartparens-ruby)
+(smartparens-global-mode)
+(show-smartparens-global-mode t)
+(sp-with-modes '(rhtml-mode)
+	       (sp-local-pair "<" ">")
+	       (sp-local-pair "<%" "%>"))
