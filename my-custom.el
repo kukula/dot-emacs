@@ -18,7 +18,7 @@
 (sml/setup)
 (sml/apply-theme 'dark)
 
-;; Hooks
+;; Hook to delete trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Navigate between windows using Alt-1, Alt-2, Shift-left, shift-up, shift-right
@@ -41,3 +41,29 @@
 (set-face-background 'show-paren-match (face-background 'default))
 (set-face-foreground 'show-paren-match "#def")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+
+
+;; set keys for Apple keyboard, for emacs in OS X
+(setq mac-command-modifier 'super) ; make cmd key do Super
+(setq mac-option-modifier 'meta) ; make opt key do Meta
+(setq mac-control-modifier 'control) ; make Control key do Control
+(setq fn-function-modifier 'hyper)  ; make Fn key do Hyper
+
+;; Interect with Mac OS X buffer
+(defun pbcopy ()
+  (interactive)
+  (call-process-region (point) (mark) "pbcopy")
+  (setq deactivate-mark t))
+
+(defun pbpaste ()
+  (interactive)
+  (call-process-region (point) (if mark-active (mark) (point)) "pbpaste" t t))
+
+(defun pbcut ()
+  (interactive)
+  (pbcopy)
+  (delete-region (region-beginning) (region-end)))
+
+(global-set-key (kbd "H-c") 'pbcopy)
+(global-set-key (kbd "H-v") 'pbpaste)
+(global-set-key (kbd "H-x") 'pbcut)
